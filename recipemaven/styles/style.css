@@ -29,6 +29,7 @@
     padding: 7px 10px;
     margin-left: calc(42% - 60px);
     font-family: "Josefin Sans", Arial, sans-serif;
+    border-color: #4F5D75;
 }
 
 /* Slideshow container */
@@ -71,7 +72,7 @@
 }
 
 .recipes img {
-    width: 25%;
+    max-width: 40%;
     display: block;
     cursor: pointer;
     transition: transform .5s ;
@@ -107,3 +108,85 @@ h2 {
     color: #2D3142;
     font-family: "Yeseva One", Times, serif;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+    .recipebox {
+        width: 20%;
+    }
+
+    .logo {
+        width: 90%;
+        margin-left: calc(10% - 40px);
+    }
+
+    #mySearch {
+        display: inline;
+        width: 50%;
+        padding: 7px 10px;
+        margin-left: calc(32% - 60px);
+    }
+        
+    .carousel-container {
+        padding-top: 250px;    
+      }
+
+    .recipes img {
+        max-width: 40%;
+    }
+
+    h2 {
+        padding-bottom: 20px;
+    }
+
+    .footer {
+        font-size: 1rem;
+        display: block;
+        text-align: center;
+        height: 100px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .recipebox {
+        width: 30%;
+    }
+
+    .logo {
+        width: 90%;
+        margin-left: calc(20% - 60px);
+    }
+
+    #mySearch {
+        display: inline;
+        width: 50%;
+        padding: 7px 10px;
+        margin-left: calc(42% - 60px);
+    }
+        
+    .carousel-container {
+        padding-top: 160px;    
+      }
+
+      .recipe-list {
+        flex-wrap: wrap;
+    }
+
+    .recipes img {
+        max-width: 30%;
+    }
+
+    h2 {
+        padding-bottom: 10px;
+    }
+
+    .footer {
+        font-size: .8rem;
+        display: block;
+        text-align: center;
+        height: 100px;
+    }
+}
+

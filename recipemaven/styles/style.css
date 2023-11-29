@@ -230,7 +230,7 @@ h5 {
     text-align: center;
 }
 
-.recipe-category-results {
+.recipe-category-results, .recipebox-results {
     font-family: "Yeseva One", Times, serif;
     color: #2D3142;
     font-size: 1.5rem;
@@ -240,6 +240,38 @@ h5 {
     margin-bottom: calc(-10% - 50px);
 }
 
+.savedrecipes {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: calc(15% - 30px);
+    margin-bottom: calc(5% - 20px);
+}
+
+.savedrecipecard {
+    background-color: rgba(191, 192, 192, 0.5);
+    border-radius: 15px;
+    border-color: #EF8354;
+    border-style: groove;
+    margin: 50px 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+}
+
+.rating-box  {
+    font-family: "Josefin Sans", Arial, sans-serif;
+    color: #2D3142;
+}
+
+.ratingsheader {
+    padding: 10px;
+}
+
+.stars {
+    margin-left: 13px;
+}
 
 .footer {
     background: linear-gradient(#FFFFFF, #4F5D75);

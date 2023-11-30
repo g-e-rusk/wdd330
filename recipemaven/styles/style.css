@@ -123,13 +123,13 @@
     margin-right: calc(7% - 10px);
 }
 
-.recipe-box {
+.recipe-box-save {
     display: inline;
     grid-column: 2/3;
     grid-row: 1/2;
-    padding: 15px 15px;
     max-height: 70px;
-    margin-top: calc(60% - 10px);
+    max-width: 40%;
+    margin-top: calc(50% - 10px);
     font-family: "Josefin Sans", Arial, sans-serif;
     font-size: 1.5rem;
     border-color: #EF8354;
@@ -138,6 +138,23 @@
     cursor: pointer;
 
 }
+
+.recipe-box-remove {
+    display: inline;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    max-height: 70px;
+    max-width: 40%;
+    margin-top: calc(70% - 10px);
+    font-family: "Josefin Sans", Arial, sans-serif;
+    font-size: 1.5rem;
+    border-color: #EF8354;
+    border-radius: 15px;
+    margin-left: calc(25% - 10px);
+    cursor: pointer;
+
+}
+
 .recipe-card-title, .ingredients, .directions {
     font-family: "Yeseva One", Times, serif;
     color: #2D3142;
@@ -323,74 +340,44 @@ h5 {
     }
 
     .recipecard {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 150px;
-        max-width: 50%;
-        margin-left: calc(30% - 50px);
-        margin-top: calc(15% - 40px);
-        background-color: rgba(191, 192, 192, 0.5);
-        border-radius: 15px;
-        border-color: #EF8354;
-        border-style: ridge;
+        max-width: 92%;
+        margin-left: calc(5%); 
+        margin-top: calc(40% - 40px);
         
     }
     
     .recipe-card {
-        width: 60%;  
-        margin-top: calc(10% - 20px);
-        margin-left: calc(35% - 15px);
-        box-shadow: 2px 2px 2px #2D3142;
-        padding: 0;
-        border-radius: 5px;
+        margin-top: calc(20% - 20px);
+        margin-left: calc(20% - 15px);
     }
     
     .recipe-card-title {
-        display: inline;
-        font-size: 3rem;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        text-align: center;
-        margin-top: calc(7% - 5px);
-        margin-right: calc(7% - 10px);
+        font-size: 2.25rem;
+        margin-top: calc(17% - 5px);
+        margin-right: calc(15% - 10px);
     }
     
-    .recipe-box {
-        display: inline;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        padding: 15px 15px;
-        max-height: 70px;
-        margin-top: calc(60% - 10px);
-        font-family: "Josefin Sans", Arial, sans-serif;
-        font-size: 1.5rem;
-        border-color: #EF8354;
-        border-radius: 15px;
-        margin-left: calc(25% - 10px);
-        cursor: pointer;
-    
+    .recipe-box-save {
+        max-width: 50%;
+        margin-left: calc(20% - 10px);
     }
-    .recipe-card-title, .ingredients, .directions {
-        font-family: "Yeseva One", Times, serif;
-        color: #2D3142;
+    
+    .recipe-box-remove {
+        max-width: 50%;
+        margin-top: calc(80% - 10px);
+        margin-left: calc(20% - 10px);
     }
     
     .ingredients {
-        font-size: 1.75rem;
-        grid-column: 1/2;
-        grid-row: 2/3;
+        font-size: 1.5rem;
+        margin-left: calc(20% - 20px);
+        margin-top: calc(-20%);
     }
     
     .ingredientlist {
-        grid-column: 1/3;
-        grid-row: 2/3;
         font-size: 1.25rem;
-        margin-top: calc(5% - 5px);
-        margin-left: calc(15% - 10px);
-    }
-    
-    .ingredient {
-        line-height: 1.5;
+        margin-top: calc(5% - 50px);
+        margin-left: calc(7% - 20px);
     }
     
     h5 {
@@ -398,26 +385,72 @@ h5 {
     }
     
     .directions {
-        grid-column: 1/2;
-        grid-row: 3/4;
-        font-size: 1.75rem;
-        padding: 20px;
+        font-size: 1.5rem;
+        margin-left: calc(15% - 20px);
     }
     
     .direction {
-        grid-column: 1/3;
-        grid-row: 3/4;
         margin-top: calc(10% - 5px);
-        font-size: 2rem;
-        cursor: pointer;
-        margin-left: calc(18% - 17px);
+        font-size: 1.75rem;
+        margin-left: calc(10% - 17px);
     }
     
-    .ingredient, .direction {
-        font-family: "Josefin Sans", Arial, sans-serif;
-        color: #2D3142;
+    .recipebox-results {
+        font-size: 1.5rem;
+        margin-left: calc(11% - 20px);
+        margin-top: calc(35% - 10px);
+        margin-bottom: calc(-10% - 50px);
     }
 
+    .recipe-category-results {
+        font-size: 1.5rem;
+        padding: 20px;
+        margin-left: calc(11% - 20px);
+        margin-top: calc(35% - 20px);
+        margin-bottom: calc(-10% - 50px);
+    }
+    
+    .savedrecipes {
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: calc(20% - 50px);
+        margin-bottom: calc(5% - 20px);
+    }
+    
+    .savedrecipecard, .myrecipecard {
+        margin: 20px 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .recipeimg {
+        width: 100%;
+    }
+
+    .recipetitle, .recipecategory {
+        font-size: 1.15rem;;
+    }
+    
+    .rating-box  {
+        grid-column: 1/3;
+    }
+    
+    .ratingsheader {
+        padding: 10px;
+    }
+    
+    .stars {
+        margin-left: 13px;
+    }
+
+    .recipe-search-results {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: calc(20% - 30px);
+        margin-bottom: calc(5% - 20px);
+        
+    }
 
     .footer {
         font-size: 1rem;
@@ -462,76 +495,132 @@ h5 {
     }
 
     .recipecard {
-        display: flex;
-        max-width: 100%;
-        margin-left: calc(5% - 5px);
-        margin-top: calc(25% - 5px);
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin-left: calc(5%); 
+        margin-top: calc(40% - 40px);
+        
     }
     
     .recipe-card {
-        max-width: 50%;  
-        max-height: 200px;
-        margin-top: calc(10% - 20px);
-        margin-left: calc(5% - 5px);
+        width: 100%;
+        margin-top: calc(30% - 20px);
+        margin-left: calc(20% - 15px);
     }
     
     .recipe-card-title {
-        display: block;
-        font-size: 1.75rem;
-        text-align: center;
-        margin-top: calc(7% - 5px);
-        margin-left: calc(7% - 10px);
+        font-size: 1.25rem;
+        margin-top: calc(17% - 5px);
+        margin-right: calc(15% - 10px);
     }
     
-    .recipe-box {
-        display: block;
-        padding: 15px 15px;
-        max-height: 100px;
-        margin-top: calc(45% - 10px);
-        font-size: 1.15rem;
-        margin-left: 0;
+    .recipe-box-save {
+        max-width: 80%;
+        max-height: 40px;
+        font-size: .85rem;
+        margin-top: calc(70% - 10px);
+    }
     
+    .recipe-box-remove {
+        max-width: 80%;
+        max-height: 40px;
+        font-size: .85rem;
+        padding: 5px;
+        margin-top: calc(110% - 10px);
     }
     
     .ingredients {
-        font-size: 1.45rem;
+        font-size: 1.15rem;
+        margin-left: calc(20% - 20px);
+        margin-top: calc(-0%);
     }
     
     .ingredientlist {
-        grid-column: 1/3;
-        grid-row: 2/3;
-        font-size: 1.25rem;
-        margin-top: calc(5% - 5px);
-        margin-left: calc(15% - 10px);
-    }
-    
-    .ingredient {
-        line-height: 1.5;
+        font-size: .9rem;
+        margin-top: calc(27% - 50px);
+        margin-left: calc(7% - 20px);
     }
     
     h5 {
-        font-size: 1.35rem;
+        font-size: 1rem;
     }
     
     .directions {
-        grid-column: 1/2;
-        grid-row: 3/4;
-        font-size: 1.75rem;
-        padding: 20px;
+        font-size: 1.15rem;
+        margin-left: calc(7% - 20px);
     }
     
     .direction {
-        grid-column: 1/3;
-        grid-row: 3/4;
-        margin-top: calc(10% - 5px);
-        font-size: 2rem;
-        cursor: pointer;
-        margin-left: calc(18% - 17px);
+        margin-top: calc(20% - 5px);
+        font-size: 1.2rem;
+        margin-left: calc(10% - 17px);
+    }
+
+    .recipebox-results {
+        font-size: 1.5rem;
+        margin-left: calc(25% - 20px);
+        margin-top: calc(25% - 20px);
+    }
+
+    .savedrecipes {
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: calc(30% - 30px);
+        margin-bottom: calc(5% - 20px);
     }
     
-    .ingredient, .direction {
-        font-family: "Josefin Sans", Arial, sans-serif;
-        color: #2D3142;
+    .savedrecipecard {
+        margin: 5px 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .recipeimg {
+        width: 100%;
+    }
+
+    .recipetitle {
+        font-size: 1rem;
+    }
+
+    .recipecategory {
+        font-size: 1rem;
+    }
+    
+    .rating-box  {
+        grid-column: 1/3;
+    }
+    
+    .ratingsheader {
+        padding: 10px;
+    }
+    
+    .stars {
+        margin-left: 13px;
+    }
+
+    .recipe-category-results {
+        font-size: 1.15rem;
+        padding: 20px;
+        margin-left: calc(11% - 20px);
+        margin-top: calc(35% - 20px);
+        margin-bottom: calc(-10% - 50px);
+    }
+
+    .myrecipecard {
+        margin: 20px 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-search-results {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: calc(25% - 30px);
+        margin-bottom: calc(5% - 20px);
+        
     }
 
     .footer {

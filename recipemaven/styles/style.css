@@ -3,6 +3,22 @@
     box-sizing: border-box;
 }
 
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 #gradientbar {
     background: linear-gradient(#4F5D75, #FFFFFF);
     width: 100vw;
@@ -30,6 +46,10 @@
     margin-left: calc(42% - 60px);
     font-family: "Josefin Sans", Arial, sans-serif;
     border-color: #4F5D75;
+}
+
+#edamam-badge {
+    text-align: center;
 }
 
 /* Slideshow container */
@@ -90,119 +110,6 @@
     cursor: pointer;
 }
 
-.recipecard {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 150px;
-    max-width: 50%;
-    margin-left: calc(30% - 50px);
-    margin-top: calc(15% - 40px);
-    background-color: rgba(191, 192, 192, 0.5);
-    border-radius: 15px;
-    border-color: #EF8354;
-    border-style: ridge;
-    
-}
-
-.recipe-card {
-    width: 60%;  
-    margin-top: calc(10% - 20px);
-    margin-left: calc(35% - 15px);
-    box-shadow: 2px 2px 2px #2D3142;
-    padding: 0;
-    border-radius: 5px;
-}
-
-.recipe-card-title {
-    display: inline;
-    font-size: 3rem;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    text-align: center;
-    margin-top: calc(7% - 5px);
-    margin-right: calc(7% - 10px);
-}
-
-.recipe-box-save {
-    display: inline;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    max-height: 70px;
-    max-width: 40%;
-    margin-top: calc(50% - 10px);
-    font-family: "Josefin Sans", Arial, sans-serif;
-    font-size: 1.5rem;
-    border-color: #EF8354;
-    border-radius: 15px;
-    margin-left: calc(25% - 10px);
-    cursor: pointer;
-
-}
-
-.recipe-box-remove {
-    display: inline;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    max-height: 70px;
-    max-width: 40%;
-    margin-top: calc(70% - 10px);
-    font-family: "Josefin Sans", Arial, sans-serif;
-    font-size: 1.5rem;
-    border-color: #EF8354;
-    border-radius: 15px;
-    margin-left: calc(25% - 10px);
-    cursor: pointer;
-
-}
-
-.recipe-card-title, .ingredients, .directions {
-    font-family: "Yeseva One", Times, serif;
-    color: #2D3142;
-}
-
-.ingredients {
-    font-size: 1.75rem;
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-.ingredientlist {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    font-size: 1.25rem;
-    margin-top: calc(5% - 5px);
-    margin-left: calc(15% - 10px);
-}
-
-.ingredient {
-    line-height: 1.5;
-}
-
-h5 {
-    font-size: 1.35rem;
-}
-
-.directions {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    font-size: 1.75rem;
-    padding: 20px;
-}
-
-.direction {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    margin-top: calc(10% - 5px);
-    font-size: 2rem;
-    cursor: pointer;
-    margin-left: calc(18% - 17px);
-}
-
-.ingredient, .direction {
-    font-family: "Josefin Sans", Arial, sans-serif;
-    color: #2D3142;
-}
-
 .recipe-search-results {
     max-width: 80%;
     display: grid;
@@ -225,69 +132,66 @@ h5 {
 }
 
 .recipeimg {
-    width: 50%;
+    max-width: 80%;
     grid-column: 1/2;
     grid-row: 1/3;
     border-radius: 10px;
     box-shadow: 2px 2px 2px #2D3142;
+    margin-top: calc(25% - 20px);
 }
 
 .recipetitle {
     font-family: "Yeseva One", Times, serif;
     color: #2D3142;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 10px;
-}
-
-.recipecategory {
-    font-family: "Josefin Sans", Arial, sans-serif;
-    color: #2D3142;
     font-size: 1.25rem;
     text-align: center;
-}
-
-.recipe-category-results, .recipebox-results {
-    font-family: "Yeseva One", Times, serif;
-    color: #2D3142;
-    font-size: 1.5rem;
-    padding: 20px;
-    margin-left: calc(11% - 20px);
-    margin-top: calc(12% - 20px);
-    margin-bottom: calc(-10% - 50px);
-}
-
-.savedrecipes {
-    max-width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: calc(15% - 30px);
-    margin-bottom: calc(5% - 20px);
-}
-
-.savedrecipecard {
-    background-color: rgba(191, 192, 192, 0.5);
-    border-radius: 15px;
-    border-color: #EF8354;
-    border-style: groove;
-    margin: 50px 10px;
     padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    cursor: pointer;
+    grid-column: 2/3;
 }
 
-.rating-box  {
+.recipesource {
     font-family: "Josefin Sans", Arial, sans-serif;
     color: #2D3142;
+    font-size: 1.05rem;
+    text-align: center;
+    grid-column: 2/3;
 }
 
-.ratingsheader {
-    padding: 10px;
+.recipe-category-results {
+    grid-column: 1/4;
+    margin-left: calc(0.5% - 5px);
+    font-family: "Yeseva One", Times, serif;
+    color: #2D3142;
+    font-size: 2rem;
+    padding: 20px;
 }
 
-.stars {
-    margin-left: 13px;
+.attributions {
+    max-width: 50%;
+    margin-top: calc(12% - 40px);
+    background-color: rgba(239, 131, 84, 0.5);
+    padding: 25px;
+    border-radius: 25px;
+    margin-bottom: calc(6.9% - 10px);
+
+}
+
+.attributionpage {
+    font-family: "Yeseva One", Times, serif;
+    color: #2D3142;
+    font-size: 3rem;
+    padding-bottom: 10px;
+}
+
+.attribution {
+    font-family: "Josefin Sans", Arial, sans-serif;
+    color: #2D3142;
+    font-size: 2rem;
+    line-height: 2;
+}
+
+.attribution > a {
+    color: #2D3142;
 }
 
 .footer {
@@ -405,9 +309,8 @@ h5 {
     .recipe-category-results {
         font-size: 1.5rem;
         padding: 20px;
-        margin-left: calc(11% - 20px);
-        margin-top: calc(35% - 20px);
-        margin-bottom: calc(-10% - 50px);
+        margin-top: calc(10% - 20px);
+        
     }
     
     .savedrecipes {
@@ -445,11 +348,27 @@ h5 {
     }
 
     .recipe-search-results {
+        max-width: 75%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-top: calc(20% - 30px);
-        margin-bottom: calc(5% - 20px);
+        /* margin-top: calc(20% - 30px);
+        margin-bottom: calc(5% - 20px); */
         
+    }
+
+    .attributions {
+        max-width: 75%;  
+        margin-top: calc(15% - 10px); 
+        margin-bottom: calc(12% - 10px); 
+    }
+    
+    .attributionpage {
+        font-size: 2.25rem;
+    }
+    
+    .attribution {
+        font-size: 1.75rem;
+        line-height: 2;
     }
 
     .footer {
@@ -621,6 +540,21 @@ h5 {
         margin-top: calc(25% - 30px);
         margin-bottom: calc(5% - 20px);
         
+    }
+
+    .attributions {
+        max-width: 90%;  
+        margin-top: calc(15% - 10px); 
+        margin-bottom: calc(30% - 10px); 
+    }
+    
+    .attributionpage {
+        font-size: 1.5rem;
+    }
+    
+    .attribution {
+        font-size: 1rem;
+        line-height: 2;
     }
 
     .footer {

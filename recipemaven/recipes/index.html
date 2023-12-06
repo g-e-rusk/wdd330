@@ -11,91 +11,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Yeseva+One&display=swap" rel="stylesheet">
-    <script src="../js/main.js" defer></script>
+    <script src="../js/recipe-list.js" type="module"></script>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
 
 </head>
-    <div id="gradientbar">
-        <header>             
-            <a id="recipe_box" href="">
-                <img class="recipebox" src="../images/foodbox1.png" alt="Recipe Box icon">
-            </a>
-            <a id="logo_link" href="../index.html">
-                <img class="logo" src="../images/logo.png" alt="Recipe Maven logo">
-            </a>
 
-            <form class="search">
-                <div>
-                    <input type="search" id="mySearch" name="q" placeholder="Search for recipes"/>
-                    <button class="searchbutton">&#x1F50E;&#xFE0E;</button>
-                </div>
-            </form>
-        </header>
-    </div>
+<body>
+<div id="gradientbar">
+    <header>             
+        <a id="logo_link" href="/recipemaven/index.html">
+            <img class="logo" src="/recipemaven/images/logo.png" alt="Recipe Maven logo">
+        </a>
+
+        <form class="search">
+            <div>
+                <input type="search" id="mySearch" name="q" placeholder="Search for recipes"/>
+                <button class="searchbutton">&#x1F50E;&#xFE0E;</button>
+            </div>
+        </form>
+        <div id="edamam-badge" data-color="transparent"></div>
+    </header>
+</div>
     <main>
-        <h2 class="recipe-category-results">Recipe Type: Breakfast</h2>
-        <div class="recipe-search-results">
+        <div class="recipe-category-results"></div>
+        <div class="recipe-search-results"></div>
     
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-            <div class="myrecipecard">
-                <img class="recipeimg" src="../images/raspberrylemonmuffins.jpg" alt="Raspberry Lemon Muffins">
-                <h3 class="recipetitle">Raspberry Lemon Muffins</h3>
-                <p class="recipecategory">Recipe Category: Breakfast</p>
-            </div>
-        </div>
+        <template id="recipe-card-template">  
+            <ul class="recipe-list">
+            <li class="myrecipecard">
+                <img class="recipeimg" src="" alt="">
+                <h3 class="recipetitle"></h3>
+                <h4 class="recipesource"></h4>
+            </li>
+        </ul>
+        </template>
         
     </main>
     
     <footer>
         <div class="footer">
-            <p>&copy;<span id="currentyear"></span> Recipe Maven</p>
-            <p>Geri Rusk</p>
+            <p>&copy;Geri Rusk for Recipe Maven</p>
             <p>WDD 330 Final Project</p>
-            <a href="../attributions/index.html">Attribution Page</a>
-            <p>Last Modified: <span id="date"></span></p>
+            <a href="/recipemaven/attributions/index.html">Attribution Page</a>
         </div>
     </footer>
     
 
-<body>
+
     
 </body>
 </html>

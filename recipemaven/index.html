@@ -11,26 +11,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Yeseva+One&display=swap" rel="stylesheet">
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
 
 </head>
-    <div id="gradientbar">
-        <header>             
-            <a id="recipe_box" href="">
-                <img class="recipebox" src="images/foodbox1.png" alt="Recipe Box icon">
-            </a>
-            <a id="logo_link" href="index.html">
-                <img class="logo" src="images/logo.png" alt="Recipe Maven logo">
-            </a>
 
-            <form class="search">
-                <div>
-                    <input type="search" id="mySearch" name="q" placeholder="Search for recipes"/>
-                    <button class="searchbutton">&#x1F50E;&#xFE0E;</button>
-                </div>
-            </form>
-        </header>
-    </div>
+<body>
+<div id="gradientbar">
+    <header>             
+        <a id="logo_link" href="/recipemaven/index.html">
+            <img class="logo" src="/recipemaven/images/logo.png" alt="Recipe Maven logo">
+        </a>
+
+        <form class="search">
+            <div>
+                <input type="search" id="mySearch" name="q" placeholder="Search for recipes"/>
+                <button class="searchbutton">&#x1F50E;&#xFE0E;</button>
+            </div>
+        </form>
+    </header>
+</div>
     <main>
         <div class="carousel-container">
             <div class="mySlides fade">
@@ -57,20 +57,22 @@
         <section class="recipes">
             <ul class="recipe-list">
                 <li>
+                    <a href="recipes/index.html?category=breakfast">
                     <img src="images/eggs.png" alt="Picture of eggs, toast and bacon for Breakfast food link">
                     <h2 class="category">Breakfast</h2>
+                </a>
                 </li>
                 <li>
+                    <a href="recipes/index.html?category=lunch">
                     <img src="images/sandwich.png" alt="Picture of sandwich for Lunch food link">
                     <h2 class="category">Lunch</h2>
+                </a>
                 </li>
                 <li>
+                    <a href="recipes/index.html?category=dinner">
                     <img src="images/pasta.png" alt="Picture of pasta for Dinner food link">
                     <h2 class="category">Dinner</h2>
-                </li>
-                <li>
-                    <img src="images/cake.png" alt="Picture of cake for Dessert food link">
-                    <h2 class="category">Dessert</h2>
+                </a>
                 </li>
 
             </ul>
@@ -79,16 +81,15 @@
     
     <footer>
         <div class="footer">
-            <p>&copy;<span id="currentyear"></span> Recipe Maven</p>
-            <p>Geri Rusk</p>
+            <p>&copy;Geri Rusk for Recipe Maven</p>
             <p>WDD 330 Final Project</p>
-            <a href="attributions/index.html">Attribution Page</a>
-            <p>Last Modified: <span id="date"></span></p>
+            <a href="/recipemaven/attributions/index.html">Attribution Page</a>
+            <div id="edamam-badge" data-color="transparent"></div>
         </div>
     </footer>
     
 
-<body>
+
     
 </body>
 </html>
